@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin:*');
 header('Content-Type:application/json; charset=utf-8');
 require "./core/mysql_core.php";
 $conn = mysqlConnect();
@@ -7,8 +8,11 @@ if(!$conn){
 }
 $str = $_POST['ty'];
 $token = $_POST['token'];
+$callback = $_GET['callback'];
 $result = FALSE;
-//if(customTokenProcess($conn, $token)){
+//if(customTok
+//enProcess($conn, $token)){
     $result = tyInsert($conn, $str);
 //}
-exit(json_encode($result));
+mysqli_close($conn);
+echo $callback.'('.json_encode($result).')';

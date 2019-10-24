@@ -27,7 +27,7 @@ function maxTyId($conn){
 }
 
 function tySelectString($conn, $tyNum){
-    $sql = 'SELECT ty FROM main where id = ' . "$tyNum";
+    $sql = 'SELECT * FROM main where id = ' . "$tyNum";
     $result = mysqli_query($conn, $sql);
     if($result->num_rows != 0){
         $row = $result->fetch_assoc();
@@ -44,7 +44,7 @@ function tyInsert($conn, $str){
     if ($conn->query($sql) === TRUE) {
         return TRUE;
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $sql . "<br/>" . $conn->error;
         return FALSE;
     }
 }
