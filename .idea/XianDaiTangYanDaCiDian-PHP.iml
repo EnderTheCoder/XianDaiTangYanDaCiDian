@@ -4,6 +4,6 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="Ender-Roll-Caller-2.0-Front" />
+    <orderEntry type="module" module-name="Ender-Roll-Caller-2.0-PHP" />
   </component>
 </module>

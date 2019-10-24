@@ -14,6 +14,7 @@ while ($str == false && $maxSelectCnt != 3){
     $maxSelectCnt++;
 }
 //echo $str;
+$str = "“".$str."”";
 mysqli_close($conn);
 $callback = $_GET['callback'];
 echo $callback.'('.json_encode($str).')';
